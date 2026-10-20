@@ -11,8 +11,19 @@ Een echt 3-banen-renspel. Ren met een vosje, wissel van baan, spring over blokke
 
 **Totaal: 79 levels, 9 werelden.** Een level bevat vijf juiste poorten. Daarna verdien je een beloning en speel je de volgende baan vrij. De opdracht is steeds kindvriendelijk: bijvoorbeeld *Zoek deze letter!* in plaats van termen als *foneem* of *klank*.
 
+## Comfortabel spelen (nieuwe versie)
+
+Het spel start standaard met **🐢 Rustig spelen**: een lagere snelheid en zonder de lastige springblokken. Via **⚡ Vlot** kun je op elk moment overschakelen; dat kan ook terwijl het spel gepauzeerd is.
+
+- **Drie grote antwoordvakjes** staan boven de baan. Tik direct op de Arabische letter of het woord om jouw vosje naar die baan te sturen.
+- De gekozen baan licht op met **geel** en heeft duidelijke visuele focus voor toetsenbordgebruikers.
+- Een fout antwoord kost **geen levens** en hetzelfde antwoord komt opnieuw om rustig te oefenen.
+- Na elk antwoord heb je wat meer tijd voor de volgende opdracht. De Nederlandse instructie wordt niet bij elke herhaling opnieuw uitgesproken.
+- Het startscherm heeft een knop **Verder spelen** en een snelle niveaukeuze zonder leeftijden.
+- Op smalle mobiele schermen blijft de bediening groot; geluid kun je uitzetten en het spel pauzeert als je het tabblad verlaat.
+
 ## Besturing
-**Gsm/tablet:** gebruik de knoppen of veeg links, rechts, omhoog (springen), omlaag (bukken). Je kunt ook een baan aantikken. **Computer:** pijltjes, WASD en spatie. **🔊:** luister opnieuw. **⏸️:** pauze.
+**Gsm/tablet:** tik op een van de drie grote antwoordvakjes (de makkelijkste manier), gebruik de stuurknoppen, of veeg links/rechts/omhoog/omlaag op de baan. Je kunt ook rechtstreeks op de baan tikken. **Computer:** pijltjes, WASD en spatie. **🔊:** luister opnieuw. **⏸️:** pauze.
 
 ## Installatie en GitHub Pages
 Alles wat het spel nodig heeft staat rechtstreeks in **`index.html`** — inclusief Canvas-renspel, grafische weergave, alle letters en woorden en spelcode. Je hoeft niets te installeren en er is geen build nodig.
@@ -32,7 +43,7 @@ Bij het ontwerp is gekeken naar gestructureerde letterherkenning, korte herhalin
 Dit is een **speelbaar prototype**, nog geen pedagogisch gevalideerde volledige Arabische leesmethode. Idealiter volgt een speeltest met kinderen en controle van de MSA-uitspraak door een Arabisch docent. Vooral kinderen die nog geen Nederlands kunnen lezen kunnen in de eerste levels begeleiding van een ouder gebruiken.
 
 ## Wat is getest?
-- Desktop (1280×800) en mobiel (390×844).
+- Desktop (1280×800) en mobiel (390×844 en 320×700).
 - Keuze uit 3 kennisniveaus; de eerste wereld heeft 7 levels.
 - Alle **79 levels × 3 oefenrondes = 237** op geldige en unieke antwoordopties.
 - Rennen, vijf goede poortkeuzes, sterren en overwinningsscherm.
