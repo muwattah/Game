@@ -42,7 +42,7 @@ node --check game.js
 node check.js
 ```
 
-De controles bewaken het aantal lessen en of elke meerkeuzeopgave precies één correct antwoord heeft voor iedere leeftijdsgroep. Visuele browser- en audioacceptatietesten moeten nog op concrete apparaten worden uitgevoerd.
+De controles bewaken het aantal lessen en of elke meerkeuzeopgave precies één correct antwoord heeft voor iedere leeftijdsgroep. Desktop- en mobiele browseracceptatietesten zijn met headless Chromium uitgevoerd via `browser_smoke.py`. De Arabische audio moet nog op concrete apparaten met een geïnstalleerde Arabische stem worden gecontroleerd.
 
 ## 🔍 Onderzoek en didactische verantwoording
 
@@ -64,4 +64,4 @@ De controles bewaken het aantal lessen en of elke meerkeuzeopgave precies één 
 
 ## Techniek
 
-Plain HTML, CSS en JavaScript. Bestanden: `index.html`, `styles.css`, `game.js`, `check.js`. Er zijn geen externe runtimebibliotheken nodig.
+Plain HTML, CSS en JavaScript. Bestanden: `index.html`, `styles.css`, `game.js`, `check.js`, `browser_smoke.py`. Er zijn geen externe runtimebibliotheken nodig.
