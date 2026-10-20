@@ -1,67 +1,39 @@
-# Harfia ✦ Arabisch avontuur
+# Harfia Rush 🦊⭐ — Arabisch leren door écht te spelen
 
-Een volledig statisch, mobielvriendelijk Nederlandstalig leerspel om kinderen van **3 t/m 10 jaar** spelenderwijs **Modern Standaardarabisch (الفصحى)** te leren. Zonder accounts, advertenties, tracking of backend.
+**Speel nu:** https://muwattah.github.io/Game/ (na activeren van GitHub Pages)
 
-## 🎮 Spelinhoud (65 levels)
+Een echt 3-banen-renspel. Ren met een vosje, wissel van baan, spring over blokken, pak sterren en kies onderweg de juiste Arabische letter, het juiste woord of cijfer. Het spel werkt in een browser, ook op telefoon of tablet.
 
-| Wereld | Levels | Inhoud |
-| --- | ---: | --- |
-| 🌼 De Letterweide | 7 | ا ب ت ث ج ح خ |
-| 🌳 Het Klankenbos | 7 | د ذ ر ز س ش ص |
-| 🌟 De Sterrenhemel | 7 | ض ط ظ ع غ ف ق |
-| 🏰 Het Letterkasteel | 7 | ك ل م ن ه و ي |
-| 🎶 De Klankentuin | 9 | Fatha, kasra, damma; ب / ت / م |
-| 🧸 De Woordenschat | 12 | Dieren, eten, spullen en emoji's |
-| 🔢 Het Tel-eiland | 10 | ١ tot ١٠; tellen, woorden en cijfers |
-| 💬 Het Praatplein | 6 | Eenvoudige begroetingen en zinnetjes |
+## Kennisniveaus — geen leeftijden
+- **🐣 Ik begin net**: vier werelden, de 28 Arabische letters.
+- **🦊 Ik herken al iets**: twaalf woorden met plaatjes, tien Arabische cijfers en negen combinaties met korte klinkertekens.
+- **🚀 Ik lees al wat**: zes dagelijkse uitdrukkingen en veertien letters in de beginvorm in woorden.
 
-**Leeftijdsinstellingen:** 3–5 jaar — grote visuele herkenningsopgaven; 6–7 jaar — ook klanktekens en vrij tekenen; 8–10 jaar — lettervormen en zinnetjes. Dit zijn *startinstellingen*, niet de garantie dat elk kind hetzelfde tempo volgt. Elk level bestaat uit een korte instructie, gerichte feedback en oefeningen. Levels en werelden openen geleidelijk; het telspel is onmiddellijk beschikbaar.
+**Totaal: 79 levels, 9 werelden.** Een level bevat vijf juiste poorten. Daarna verdien je een beloning en speel je de volgende baan vrij. De opdracht is steeds kindvriendelijk: bijvoorbeeld *Zoek deze letter!* in plaats van termen als *foneem* of *klank*.
 
-**Leermechaniek:** leren → actief ophalen uit het geheugen (meerkeuze/luisteropdracht) → bemoedigende feedback → herhaling na 1/3/7/14/30 dagen. Drie sterren per level; fouten leiden niet tot straf. Handmatig tracen is niet automatisch beoordeeld. Voortgang wordt opgeslagen via `localStorage`.
+## Besturing
+**Gsm/tablet:** gebruik de knoppen of veeg links, rechts, omhoog (springen), omlaag (bukken). Je kunt ook een baan aantikken. **Computer:** pijltjes, WASD en spatie. **🔊:** luister opnieuw. **⏸️:** pauze.
 
-## 🔊 Arabische uitspraak – belangrijk
+## Installatie en GitHub Pages
+Alles wat het spel nodig heeft staat rechtstreeks in **`index.html`** — inclusief Canvas-renspel, grafische weergave, alle letters en woorden en spelcode. Je hoeft niets te installeren en er is geen build nodig.
 
-De applicatie gebruikt de **Web Speech API** en kiest een beschikbare Arabische systeemstem (`ar-*`). De stem wordt iets hoger en langzamer afgespeeld voor een vriendelijke, speelse klank. De letter **naam** en de **klank met fatha** worden afzonderlijk aangeboden. Voor Alif wordt het verschil tussen de alif en de hamza in de uitleg genoemd. Woorden en voorbeelden zijn voorzien van Arabische klinkertekens.
+GitHub → repository **Game** → Settings → Pages → Deploy from a branch → `main` → `/ (root)` → Save. Wacht tot de publicatie gereed is, open dan https://muwattah.github.io/Game/.
 
-**Grenzen:** dit is **geen opgenomen echte kinderstem**; stemkwaliteit, uitspraak, beschikbaarheid en offline werking zijn afhankelijk van browser/besturingssysteem. Installeer een Arabische TTS-stem in de systeeminstellingen en controleer de uitspraakkwaliteit, met name keelklanken (ح، ع، غ، ق) en korte klinkers. Zonder Arabische stem zijn luistertoetsen vervangen door visuele vragen, en toont de instellingenpagina de beperking. Voor een productie-uitgave kan een professioneel ingesproken, door een moedertaalspreker gecontroleerde audiobibliotheek worden toegevoegd.
+**Opmerking over oudere bestanden:** `game.js`, `styles.css`, `check.js` en `browser_smoke.py` horen bij de vorige quizversie en worden niet ingeladen door deze standalone renspel-versie. De huidige code staat in `index.html`.
 
-## 🚀 Lokaal openen
+## Geluid en privacy
+Het spel gebruikt `speechSynthesis` met taal `ar-SA` voor de Arabische uitspraak, en Web Audio voor beloningsgeluidjes. De Arabische stem en de kwaliteit hangen af van apparaat en browser. **Dit is geen ingesproken kinderstem.** Voor een echte kinderstem moeten gecontroleerde audiobestanden toegevoegd worden. Een kind kan de Arabische tekst blijven zien, ook als spraak niet beschikbaar is.
 
-Open `index.html` in een moderne browser, of voer vanuit deze map uit:
+Er zijn geen accounts, advertenties, trackers of online opslag van voortgang. Het spel slaat voortgang lokaal in de browser op via `localStorage`.
 
-```sh
-python3 -m http.server 8000
-```
+## Onderbouwing en onderwijsontwerp
+Bij het ontwerp is gekeken naar gestructureerde letterherkenning, korte herhaling, directe feedback en opbouw op basis van beheersing in plaats van leeftijd. Bronnen: [NICHD / National Reading Panel](https://www.nichd.nih.gov/publications/pubs/nrp/findings) en [overzicht van Arabische lettervormen](https://khatarabic.com/courses/initiate/lessons/l13-all-letter-forms.html).
 
-Open vervolgens `http://localhost:8000`. Voor GitHub Pages: open **Settings → Pages** en kies **Deploy from a branch → main → /(root)**. Er zijn geen buildstappen, accounts, API-sleutels, packages of frameworks nodig.
+Dit is een **speelbaar prototype**, nog geen pedagogisch gevalideerde volledige Arabische leesmethode. Idealiter volgt een speeltest met kinderen en controle van de MSA-uitspraak door een Arabisch docent. Vooral kinderen die nog geen Nederlands kunnen lezen kunnen in de eerste levels begeleiding van een ouder gebruiken.
 
-### Geautomatiseerde controles
-
-```sh
-node --check game.js
-node check.js
-```
-
-De controles bewaken het aantal lessen en of elke meerkeuzeopgave precies één correct antwoord heeft voor iedere leeftijdsgroep. Desktop- en mobiele browseracceptatietesten zijn met headless Chromium uitgevoerd via `browser_smoke.py`. De Arabische audio moet nog op concrete apparaten met een geïnstalleerde Arabische stem worden gecontroleerd.
-
-## 🔍 Onderzoek en didactische verantwoording
-
-1. **Arabische lettervormen:** het Arabische alfabet heeft 28 basisletters, van rechts naar links; de meeste letters veranderen visueel afhankelijk van hun positie. [Arabisch alfabet en schrijfvormen](https://khatarabic.com/courses/initiate/lessons/l13-all-letter-forms.html).
-2. **Klinkertekens:** fatha َ, kasra ِ, damma ُ tonen de korte klinkers. Jonge kinderen leren vaak eerst gevocaliseerde teksten, waarna latere lezers steeds meer tekst zonder klinkertekens lezen. [Early Sensitivity to Morphology in Beginning Readers of Arabic](https://pmc.ncbi.nlm.nih.gov/articles/PMC7538675/). Het effect van klinkertekens is niet uitsluitend positief; ze maken tekst visueel ook dichter. [Asadi, 2017](https://www.tandfonline.com/doi/abs/10.1080/17586801.2017.1400493).
-3. **Klankbewustzijn:** expliciet oefenen met de relatie tussen geluid en geschreven teken helpt beginnende lezers. Daarom worden *naam* en *klank* bewust apart aangeboden. [National Reading Panel (NICHD)](https://www.nichd.nih.gov/publications/pubs/nrp/Pages/findings.aspx). Dit onderzoek gaat over beginnend lezen in het algemeen en is geen effectiviteitsstudie van dit spel.
-4. **Leeftijdsgericht en samen spelen:** voor peuters/kleuters werkt overzichtelijke, hoogwaardige mediacontent het best in samenspraak met een ouder. Daarom zijn sessies kort, animaties beperkt en ontbreekt een negatieve tijdslimiet. [American Academy of Pediatrics](https://publications.aap.org/pediatrics/article/138/5/e20162591/60503) en [AAP Toolkit](https://www.aap.org/en/patient-care/media-and-children/center-of-excellence-on-social-media-and-youth-mental-health/early-childhood-development-and-screen-time-toolkit/).
-5. **Technisch:** beschikbare Arabische stemmen komen van het besturingssysteem/de browser; de Web Speech API ondersteunt taal, stem en toonhoogte, maar garandeert geen specifieke kinderstem. [MDN `SpeechSynthesisUtterance`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) en [`getVoices`](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices).
-
-**Inhoudelijke review aanbevolen:** Arabische lesinhoud, uitspraak, spelling en pedagogische opbouw zouden vóór grootschalig gebruik door een docent Arabisch/Moedertaalspreker en een kinderpedagoog moeten worden nagekeken. Het spel is een educatieve eerste versie, geen klinisch gevalideerde leermethode.
-
-## 🛡️ Privacy en toegankelijkheid
-
-- Geen registratie, publieke profielen, tracking, advertentiecode of uitgaande verzoeken vanuit de applicatie.
-- Lokale opslag bevat alleen leeftijdsstand, behaalde levels, sterren en reviewtijdstippen.
-- Mobielvriendelijke knoppen, toetsenbordfocus, statusmeldingen, `lang="ar"` en verminderde animaties bij `prefers-reduced-motion`.
-- Geen scorevermindering, geen aflopende timers en geen oneindige beloningsmechanieken.
-- Geïntegreerde spraaksynthese kan buiten de applicatie afhankelijk zijn van systeem-/browserdiensten.
-
-## Techniek
-
-Plain HTML, CSS en JavaScript. Bestanden: `index.html`, `styles.css`, `game.js`, `check.js`, `browser_smoke.py`. Er zijn geen externe runtimebibliotheken nodig.
+## Wat is getest?
+- Desktop (1280×800) en mobiel (390×844).
+- Keuze uit 3 kennisniveaus; de eerste wereld heeft 7 levels.
+- Alle **79 levels × 3 oefenrondes = 237** op geldige en unieke antwoordopties.
+- Rennen, vijf goede poortkeuzes, sterren en overwinningsscherm.
+- Geen JavaScript-runtimefouten in de geautomatiseerde browsertest.
