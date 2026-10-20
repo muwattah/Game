@@ -26,6 +26,16 @@ body{font-family:'Nunito','Trebuchet MS',Arial,system-ui,sans-serif;font-size:16
 .shell .hero p,.shell .section-heading p,.shell .card .small,.shell .footnote,.shell .world p,.shell .modal p{font-family:inherit}
 .shell .tag{color:#f3f9ff}.shell .hero-art .float{color:#ffffff}
 @media(min-width:761px){.shell .hero h1{font-size:clamp(3rem,5.3vw,4.6rem);line-height:1.08}.shell .hero{min-height:540px}}
+
+/* Small phones: prevent the progress bar from wrapping. */
+@media(max-width:370px){.hud-top .hud-item{padding:6px 7px;font-size:.73rem;min-height:40px;white-space:nowrap}.hud-top .dot{width:13px;height:13px}.hud-top .meter{gap:3px}}
+/* Real landscape layout: all controls visible without vertical scrolling. */
+@media(max-height:540px) and (orientation:landscape){
+.game{min-height:0;height:100dvh}.hud-item{min-height:34px;font-size:.78rem;padding:4px 9px;border-radius:12px;white-space:nowrap}
+.game .hud-center{top:47px;width:min(480px,calc(100% - 95px))}.game .prompt{padding:0 6px;border:2px solid #ffd655;border-bottom-width:4px;border-radius:14px}.game .prompt .prompt-small{font-size:.68rem;margin-bottom:-6px}.game .prompt .prompt-big{font-size:1.85rem;min-height:37px;line-height:1.35}.game .prompt .prompt-big:not(.arabic){font-size:1.3rem;line-height:1.4}.game .speak{width:47px;height:47px;font-size:1.15rem;border-radius:13px}
+.answer-dock{top:142px;width:min(520px,calc(100% - 120px))}.answer-hint{display:none}.answer-choice{min-height:55px;padding:4px;border-width:2px;border-bottom-width:4px;border-radius:12px}.answer-symbol{font-size:clamp(1.2rem,3vw,1.85rem)}.answer-long .answer-symbol{font-size:.95rem}.answer-num{font-size:.66rem}
+.game .hud-bottom{position:absolute;bottom:4px;left:0;right:0;justify-content:center;width:100%}.game .arrows{gap:8px}.game .ctrl{width:52px;height:46px;font-size:1.35rem;border-radius:13px}.game .feedback{top:62%;font-size:1rem;padding:6px 11px;border-width:3px}.game .tip{display:none}
+}
 </style>
 </head>
 <body>
